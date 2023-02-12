@@ -17,6 +17,7 @@ public class Main {
 
         try {
             server.start();
+            System.out.println("Server started");
             server.join();
         } catch (Exception e) {
             System.out.println("Cannot start or stop server");

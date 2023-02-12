@@ -16,15 +16,10 @@ public class MirrorServlet extends HttpServlet {
         Map<String, Object> model = new HashMap<>();
         model.put("message", request.getParameter("key"));
 
-        response.getWriter().println(PageGenerator.getInstance().generate("template.html", model));
+        response.getWriter().println(PageGenerator.getInstance().generate("emptyTemplate.html", model));
 
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
-
-    }
-
-    public void doPost(HttpServletRequest request,
-                       HttpServletResponse response) {
 
     }
 }
